@@ -1,0 +1,26 @@
+server:
+  port: 8082
+
+
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.144.217.253:3306/guli_ums?useSSL=false
+    username: root
+    password: ab123909
+  redis:
+    host: 192.144.217.253
+    port: 6379
+    password: mbank
+
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+
+  mapper-locations: classpath:mapper/ums/**/*.xml
